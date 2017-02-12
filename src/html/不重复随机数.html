@@ -40,7 +40,7 @@
         if (!/^[1-9]+[0-9]*$/.test(scope) || !scope) {
             return '输入参数scope必须是一个正整数，比如：10,99';
         }
-        var obj = {};
+        var obj = obj || {};
         while (Object.keys(obj).length < count) {
             var random = Math.floor(Math.random() * scope);
             console.log('random = ' + random);
