@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2个函数：1.创建一个数组，数组元素个数由参数指定；2.从1-1000整数范围里，随机选取10个不重复的元素</title>
+</head>
+<body>
+<p>2个函数：1.创建一个数组，数组元素个数由参数指定；2.从1-1000整数范围里，随机选取10个不重复的元素</p>
+<script>
+    /**
+     * 函数名：createArray
+     * 功能：创建一个数组
+     * 输入参数：一个正整数，比如：100,2000
+     * 返回值：创建好的数组
+     */
+    function createArray(num) {
+        if (!/^[1-9]+[0-9]*$/.test(num) || !num) {
+            return '输入参数必须是一个正整数，比如：10,99';
+        }
+        var arr = new Array(num);
+        for (var i = 0; i < num; i++) {
+            arr[i] = i + 1;
+        }
+        return arr;
+    }
+    // 引用：
+    console.log('创建数组 = ');
+    console.log(createArray(10));
+
+    /**
+     * 函数名：getRandoms
+     * 功能：在某个数值范围内，获取指定个随机数，比如：在1-1000范围内，随机选取10个不重复元素（随机数存为对象的key，不会重复）
+     * @param count 选取元素的个数
+     * @param scope 数值范围，比如：1000，表示1-1000范围内的数值
+     */
+    function getRandoms(count, scope) {
+        if (!/^[1-9]+[0-9]*$/.test(count) || !count) {
+            return '输入参数count必须是一个正整数，比如：10,99';
+        }
+        if (!/^[1-9]+[0-9]*$/.test(scope) || !scope) {
+            return '输入参数scope必须是一个正整数，比如：10,99';
+        }
+        var obj = {};
+        while (Object.keys(obj).length < count) {
+            var random = Math.floor(Math.random() * scope);
+            console.log('random = ' + random);
+            obj[random] = random;
+        }
+        return Object.keys(obj).sort();
+
+    }
+    // 引用：
+    console.log('随机选取不重复元素 = ');
+    console.log(getRandoms(10, 1000));
+</script>
+</body>
+</html>
