@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var People = {
+        name: 'jeff'
+    };
+    var stu = Object.create(People, {age: {value: 30}}); // Object.create方法,第二个参数写法固定，参考：https://msdn.microsoft.com/zh-cn/library/ff925952(v=vs.94).aspx
+    console.log('stu.age =');
+    console.log(stu.age);
+    console.log('stu.name =');
+    console.log(stu.name);
+    //    Student.prototype = new People(); // new方法：子原型指向父实例
+    // Object.create方法，适合纯用类写继承的情况
+    // 对比new方法，Object.create方法 的优势：1.Object.create()内部已经维护了构造函数，不需要再写构造函数；2.Object.create 还能传递第二参数，该参数是一个属性列表，能够初始化或者添加新对象的属性，也正是由此功能， Object.create 的内部实现不需要向临时构造函数传递参数.
+
+</script>
+
+</body>
+</html>

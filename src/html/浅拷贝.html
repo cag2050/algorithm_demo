@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function shallowCopy(p, c) {
+        var c = c || {};
+        for (var i in p) {
+            c[i] = p[i];
+        }
+        return c;
+    }
+    //使用
+    var p = {
+        name: 'jeff',
+        interest: ['movie', 'pingpang'],
+        movie: {
+            name1: 'name1',
+            name2: 'name2'
+        }
+    };
+    console.log('p = ');
+    console.log(p);
+    console.log('shallowCopy(p) =');
+    console.log(shallowCopy(p));
+</script>
+</body>
+</html>
