@@ -1,5 +1,5 @@
-# browser-sync_gulp_demo161105
-browser-sync和gulp例子
+
+配置了gulp和browser-sync。  
 
 说明：
 1. 在项目目录运行gulp命令，会打开gulpfile.js中设置的根目录下的index.html。
