@@ -36,9 +36,9 @@
     stu.sayName();
     stu.grade = 3;
     console.log('stu.grade = [num]; stu.grade =');
-    console.log(stu.grade); // 注意调用方法，是直接调用的属性local
-local
-    // Student.prototype = new People(); // new方法：子原型指向父实例 local
+    console.log(stu.grade); // 注意调用方法，是直接调用的属性
+
+    // Student.prototype = new People(); // new方法：子原型指向父实例
     // Object.create方法，适合纯用对象写继承的情况，推荐
     // 对比new方法，Object.create方法 的优势：1.Object.create()内部已经维护了构造函数，不需要再写构造函数；2.Object.create 还能传递第二参数，该参数是一个属性列表，能够初始化或者添加新对象的属性，也正是由此功能， Object.create 的内部实现不需要向临时构造函数传递参数.
 
