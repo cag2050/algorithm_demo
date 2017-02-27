@@ -6,26 +6,17 @@
 </head>
 <body>
 <script>
-    //    var url = 'http://www.baidu.com/search?foo=123&bar=&baz=789#link';
-    //    console.log(url.split('?')[1]);
-    var urlParam = '?foo=123&bar=&baz=789#link';
+    //    location.search 属性得到类似下面的字符串
+    var urlParam = '?foo=123&bar=&baz=789';
+    console.log('urlParam =');
     console.log(urlParam);
-    //    var regExp = /[^?=&#]+/g;
+    //        var regExp = /[^?=&]+/g;
     var regExp = /(([^?&=]+)(?:=([^?&=]*))*)/g;
-    //    var arr = urlParam.match(regExp);
-    //    console.log(regExp.exec(urlParam));
-    //    console.log(regExp.exec(urlParam));
-    //    console.log(regExp.exec(urlParam));
-    //    console.log(regExp.exec(urlParam));
-    //    console.log(regExp.exec(urlParam));
-    //    console.log(regExp.exec(urlParam));
-    console.log(regExp.exec(urlParam));
     var result = {};
     var match;
     while (match = regExp.exec(urlParam)) {
         console.log(match)
     }
-
 </script>
 </body>
 </html>

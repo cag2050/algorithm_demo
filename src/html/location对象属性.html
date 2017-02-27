@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    console.log('location =');
+    console.log(location);
+    var urlStr = window.location.href;
+    window.location = urlStr + '?v=1&v=2#hash_value';
+    console.log('location.href =');
+    console.log(location.href);
+    console.log('location.href = origin + pathname + search + hash');
+    console.log('location.origin =');
+    console.log(location.origin);
+    console.log('location.pathname =');
+    console.log(location.pathname);
+    console.log('location.search =');
+    console.log(location.search);
+    console.log('location.hash= ');
+    console.log(location.hash);
+</script>
+</body>
+</html>
